@@ -1,0 +1,22 @@
+{
+  
+  "name": "Temu Clone",
+  
+  "short_name": "Temu",
+  
+  "start_url": "/index.html",
+  
+  "display": "standalone",
+  
+  "background_color": "#FFFFFF",
+  
+  "theme_color": "#FF5A00",
+ 
+  "icons": [
+    {
+      "src":   "assets/icon.png",   
+      "sizes": "1024x1024",
+      "type":  "image/png"
+    }
+  ]
+}

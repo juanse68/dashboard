@@ -1,31 +1,49 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <!-- Metadatos básicos -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Título de la PWA -->
   <title>Temu Clone</title>
-  <link rel="manifest" href="manifest.json" />
+
+  <!-- Manifest para instalación como PWA -->
+  <link rel="manifest" href="/manifest.json" />
+
+  <!-- Hoja de estilos principal -->
   <link rel="stylesheet" href="/src/style.css" />
 </head>
 <body>
-  <!-- Splash (se oculta tras load) -->
+  <!-- Splash screen: se muestra mientras se carga la app -->
   <div id="splash">
     <img src="assets/splash.png" alt="Splash Temu Clone" />
   </div>
 
-  <!-- Contenedor principal -->
-  <main id="app">
-    <!-- Se inyecta Login / Registro / Dashboard / Carrito / Perfil -->
-  </main>
+  <!-- Contenedor dinámico donde se inyectan todas las "páginas" -->
+  <main id="app"></main>
 
-  <!-- Navegación inferior -->
+  <!-- Navegación inferior estilo Temu -->
   <nav class="bottom-nav">
-    <button data-page="home" class="active">Inicio</button>
+    <!-- Botones de pestañas -->
+    <button data-page="home"    class="active">Inicio</button>
     <button data-page="categories">Categorías</button>
     <button data-page="profile">Tú</button>
     <button data-page="cart">Carrito <span id="cart-count">0</span></button>
   </nav>
 
+  <!-- Script principal: gestiona rutas y carga módulos -->
   <script type="module" src="/src/main.js"></script>
+
+  <!-- Registro del Service Worker para PWA -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker
+          .register('/service-worker.js')
+          .then(() => console.log('Service Worker registrado.'));
+      });
+    }
+  </script>
 </body>
 </html>
