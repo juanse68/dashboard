@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Temu Clone</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <!-- Splash (se oculta tras load) -->
+  <div id="splash">
+    <img src="assets/splash.png" alt="Splash Temu Clone" />
+  </div>
+
+  <!-- Contenedor principal -->
+  <main id="app">
+    <!-- Se inyecta Login / Registro / Dashboard / Carrito / Perfil -->
+  </main>
+
+  <!-- Navegación inferior -->
+  <nav class="bottom-nav">
+    <button data-page="home" class="active">Inicio</button>
+    <button data-page="categories">Categorías</button>
+    <button data-page="profile">Tú</button>
+    <button data-page="cart">Carrito <span id="cart-count">0</span></button>
+  </nav>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

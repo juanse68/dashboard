@@ -1,0 +1,46 @@
+/* Reset */
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'Segoe UI', Tahoma, sans-serif; background:#fff; color:#333; }
+#splash { position:fixed; top:0; left:0; width:100%; height:100%; background:#fff; display:flex; align-items:center; justify-content:center; z-index:999; }
+#splash img { max-width:80%; }
+
+/* Bottom nav */
+.bottom-nav {
+  position:fixed; bottom:0; left:0; width:100%; display:flex;
+  background:#fff; border-top:1px solid #ddd;
+}
+.bottom-nav button {
+  flex:1; padding:10px 0; font-size:0.9rem; background:none; border:none; 
+  color:#666;
+}
+.bottom-nav button.active { color:#FF5A00; }
+
+/* Dashboard: listado de productos */
+.product-list { display:grid; grid-template-columns:1fr 1fr; gap:8px; padding:8px; margin-bottom:60px; }
+.card {
+  background:#fff; border:1px solid #eee; border-radius:8px; overflow:hidden;
+  box-shadow:0 2px 4px rgba(0,0,0,0.05);
+}
+.card img { width:100%; height:auto; }
+.card-body { padding:8px; }
+.card-title { font-size:0.9rem; margin-bottom:4px; height:2.2em; overflow:hidden; }
+.card-price { font-weight:bold; margin-bottom:4px; }
+.card-old-price { text-decoration:line-through; font-size:0.8rem; color:#999; }
+.card-discount { color:#FF5A00; font-size:0.8rem; }
+
+/* Páginas */
+.page { display:none; padding:16px; margin-bottom:60px; }
+.page.active { display:block; }
+
+/* Formularios */
+form { display:flex; flex-direction:column; gap:8px; }
+input, button, select { padding:8px; font-size:1rem; border:1px solid #ccc; border-radius:4px; }
+button { background:#FF5A00; color:#fff; border:none; cursor:pointer; }
+
+/* Carrito */
+.cart-item { display:flex; gap:8px; margin-bottom:12px; }
+.cart-item img { width:60px; border:1px solid #eee; border-radius:4px; }
+.cart-item-info { flex:1; }
+.cart-item-title { font-size:0.9rem; }
+.cart-item-price { font-weight:bold; }
+#cart-total { font-size:1.1rem; font-weight:bold; margin-top:16px; }
