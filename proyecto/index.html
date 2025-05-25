@@ -4,46 +4,39 @@
   <!-- Metadatos básicos -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- Título de la PWA -->
+  
+  <!-- Título de la aplicación -->
   <title>Temu Clone</title>
 
-  <!-- Manifest para instalación como PWA -->
-  <link rel="manifest" href="/proyecto/public/manifest.json" />
-
-  <!-- Hoja de estilos principal -->
+  <!-- Enlace a estilos principales -->
   <link rel="stylesheet" href="/src/style.css" />
 </head>
 <body>
-  <!-- Splash screen: se muestra mientras se carga la app -->
+  <!-- 
+    Splash opcional: se oculta en main.js tras la carga. 
+    Si no quieres splash, puedes eliminar todo este div.
+  -->
   <div id="splash">
     <img src="assets/splash.png" alt="Splash Temu Clone" />
   </div>
 
-  <!-- Contenedor dinámico donde se inyectan todas las "páginas" -->
+  <!-- 
+    Contenedor dinámico: aquí inyectamos Login, Registro, Dashboard, Carrito, Perfil…
+  -->
   <main id="app"></main>
 
-  <!-- Navegación inferior estilo Temu -->
+  <!-- 
+    Navegación inferior estilo Temu: 
+    Cada botón dispara navigate(page) en main.js
+  -->
   <nav class="bottom-nav">
-    <!-- Botones de pestañas -->
-    <button data-page="home"    class="active">Inicio</button>
+    <button data-page="home" class="active">Inicio</button>
     <button data-page="categories">Categorías</button>
     <button data-page="profile">Tú</button>
     <button data-page="cart">Carrito <span id="cart-count">0</span></button>
   </nav>
 
-  <!-- Script principal: gestiona rutas y carga módulos -->
+  <!-- Script principal: enrutamiento y lógica global -->
   <script type="module" src="/src/main.js"></script>
-
-  <!-- Registro del Service Worker para PWA -->
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker
-          .register('/service-worker.js')
-          .then(() => console.log('Service Worker registrado.'));
-      });
-    }
-  </script>
 </body>
 </html>

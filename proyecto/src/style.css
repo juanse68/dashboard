@@ -1,11 +1,15 @@
-/* ===== Reset de márgenes y box model ===== */
+/* ==========================================
+   RESET BÁSICO
+   ========================================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ===== Estilos globales ===== */
+/* ==========================================
+   ESTILOS GLOBALES
+   ========================================== */
 body {
   font-family: 'Segoe UI', Tahoma, sans-serif;
   background: #fff;
@@ -14,7 +18,9 @@ body {
   position: relative;
 }
 
-/* ===== Splash screen ===== */
+/* ==========================================
+   SPLASH SCREEN (opcional)
+   ========================================== */
 #splash {
   position: fixed;
   top: 0; left: 0;
@@ -26,7 +32,9 @@ body {
   z-index: 9999;
 }
 
-/* ===== Navegación inferior ===== */
+/* ==========================================
+   NAVEGACIÓN INFERIOR
+   ========================================== */
 .bottom-nav {
   position: fixed;
   bottom: 0; left: 0;
@@ -44,16 +52,18 @@ body {
   color: #666;
 }
 .bottom-nav button.active {
-  color: #FF5A00; /* Naranja principal de Temu */
+  color: #FF5A00; /* Naranja principal */
 }
 
-/* ===== Listado de productos (Dashboard) ===== */
+/* ==========================================
+   LISTADO DE PRODUCTOS (DASHBOARD)
+   ========================================== */
 .product-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 8px;
   padding: 8px;
-  margin-bottom: 60px; /* espacio para la nav */
+  margin-bottom: 60px; /* espacio para nav */
 }
 .card {
   background: #fff;
@@ -72,8 +82,7 @@ body {
 .card-title {
   font-size: 0.9rem;
   margin-bottom: 4px;
-  /* altura fija para títulos de varias líneas */
-  height: 2.2em;
+  height: 2.2em; /* recorte de texto múltiple línea */
   overflow: hidden;
 }
 .card-price {
@@ -91,7 +100,9 @@ body {
   margin-top: 4px;
 }
 
-/* ===== Páginas internas ===== */
+/* ==========================================
+   PÁGINAS INTERNAS
+   ========================================== */
 .page {
   display: none;
   padding: 16px;
@@ -101,7 +112,9 @@ body {
   display: block;
 }
 
-/* ===== Formularios (Login / Registro / Admin) ===== */
+/* ==========================================
+   FORMULARIOS (Login/Registro/Admin)
+   ========================================== */
 form {
   display: flex;
   flex-direction: column;
@@ -120,7 +133,9 @@ button {
   cursor: pointer;
 }
 
-/* ===== Carrito de compras ===== */
+/* ==========================================
+   CARRITO DE COMPRAS
+   ========================================== */
 .cart-item {
   display: flex;
   gap: 8px;
